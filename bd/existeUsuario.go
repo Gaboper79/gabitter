@@ -2,7 +2,7 @@ package bd
 
 import (
 	"context"
-	"github.com/Gaboper79/gawitter/models"
+	"github.com/Gaboper79/gabitter/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"time"
 )

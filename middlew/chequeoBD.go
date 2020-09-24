@@ -1,7 +1,7 @@
 package middlew
 
 import (
-	"github.com/Gaboper79/gawitter/bd"
+	"github.com/Gaboper79/gabitter/bd"
 	"net/http"
 )
 

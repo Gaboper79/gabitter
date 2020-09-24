@@ -2,14 +2,14 @@ package routers
 
 import (
 	"encoding/json"
-	"github.com/Gaboper79/gawitter/bd"
-	"github.com/Gaboper79/gawitter/models"
+	"github.com/Gaboper79/gabitter/bd"
+	"github.com/Gaboper79/gabitter/models"
 	"net/http"
 )
 
 func Registro(w http.ResponseWriter, r *http.Request) {
 	var t models.Usuario
-	err := json.NewDecoder(r.Body).Decode(&t) // el body es string y se lee una vez despues de destruye.
+	err := json.NewDecoder(r.Body).Decode(&t) // el body es string y se lee una vez despues de destruye. y cargo tod en t
 	if err != nil {
 		http.Error(w, "Error en los datos recibidos "+err.Error(), 400)
 		return
@@ -38,6 +38,6 @@ func Registro(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "No se ha logrado registrar el usuario ", 400)
 		return
 	}
-	w.WriteHeader(http.StatusCreated)
+	w.WriteHeader(http.StatusCreated) //cargamos en w el status de creado.
 
 }
