@@ -14,6 +14,7 @@ func Registro(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error en los datos recibidos "+err.Error(), 400)
 		return
 	}
+	//aca ya esta en t todos los valores del usuario
 	if len(t.Email) == 0 {
 		http.Error(w, "El email es requerido", 400)
 		return

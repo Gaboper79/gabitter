@@ -25,14 +25,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4cb4d71-7c11-4045-b30a-a3ee7c239fc1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bd/buscoPerfil.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bd/intentoLogin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jwt/jwt.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middlew/validoJWT.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/claim.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/respuestaLogin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/login.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/procesoToken.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/verPerfil.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bd/existeUsuario.go" beforeDir="false" afterPath="$PROJECT_DIR$/bd/existeUsuario.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bd/insertoRegistro.go" beforeDir="false" afterPath="$PROJECT_DIR$/bd/insertoRegistro.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handlers/handlres.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/handlres.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlew/chequeoBD.go" beforeDir="false" afterPath="$PROJECT_DIR$/middlew/chequeoBD.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.exe" beforeDir="false" afterPath="$PROJECT_DIR$/main.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/registro.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/registro.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +48,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go File" />
         <option value="Go Application" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -62,7 +67,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultGoTemplateProperty" value="Go Application" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
@@ -101,6 +106,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
