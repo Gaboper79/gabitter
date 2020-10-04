@@ -1,13 +1,14 @@
 package jwt
 
 import (
+	"time"
+
 	"github.com/Gaboper79/gabitter/models"
 	jwt "github.com/dgrijalva/jwt-go"
-	"time"
 )
 
 func GeneroJWT(t models.Usuario) (string, error) {
-	miClave := []byte("MastersdelDesarrollo_grupoFacebook")
+	miClave := []byte("Gabo_Capo")
 	payload := jwt.MapClaims{
 		"email":            t.Email,
 		"nombre":           t.Nombre,
@@ -17,7 +18,7 @@ func GeneroJWT(t models.Usuario) (string, error) {
 		"ubicacion":        t.Ubicacion,
 		"sitioweb":         t.SitioWeb,
 		"_id":              t.ID.Hex(),
-		"exp":              time.Now().Add(time.Hour * 24).Unix(), // convierte con unix la hora en un numero
+		"exp":              time.Date(2020, 12, 10, 12, 0, 0, 0, time.UTC).Unix(), // convierte con unix la hora en un numero
 	}
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, payload)
 	tokenStr, err := token.SignedString(miClave)

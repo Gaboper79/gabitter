@@ -2,11 +2,12 @@ package routers
 
 import (
 	"encoding/json"
+	"net/http"
+	"time"
+
 	"github.com/Gaboper79/gabitter/bd"
 	"github.com/Gaboper79/gabitter/jwt"
 	"github.com/Gaboper79/gabitter/models"
-	"net/http"
-	"time"
 )
 
 func Login(w http.ResponseWriter, r *http.Request) {
