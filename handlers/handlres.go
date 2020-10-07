@@ -16,7 +16,10 @@ func Manejadores() {
 	// rutas o endpoint
 	router.HandleFunc("/registro", middlew.ChequeBD(routers.Registro)).Methods("POST")
 	router.HandleFunc("/login", middlew.ChequeBD(routers.Login)).Methods("POST")
-	router.HandleFunc("/verperfil", middlew.ChequeBD(middlew.ValidoJWT(routers.VerPerfil) )).Methods("GET")
+	router.HandleFunc("/verperfil", middlew.ChequeBD(middlew.ValidoJWT(routers.VerPerfil))).Methods("GET")
+	router.HandleFunc("/modificarPerfil", middlew.ChequeBD(middlew.ValidoJWT(routers.ModificarPerfil))).Methods("PUT")
+	router.HandleFunc("/tweet", middlew.ChequeBD(middlew.ValidoJWT(routers.GraboTweet))).Methods("POST")
+	router.HandleFunc("/leoTweets", middlew.ChequeBD(middlew.ValidoJWT(routers.LeoTweets))).Methods("GET")
 
 	// pongo en listen el puerto
 	PORT := os.Getenv("PORT")
