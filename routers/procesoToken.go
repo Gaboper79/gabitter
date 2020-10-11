@@ -15,15 +15,17 @@ var IDUsuario string
 func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
 	miClave := []byte("Gabo_Capo")
 	claims := &models.Claim{}
-
+	//todo "tengo que ver porque no graba Id usuario en los tweet"
 	/*splitToken := strings.Split(tk, "Bearer") // separa bearer del token
 	// sino hay dos bear y el token hay error
 	if len(splitToken) != 2 {
 		return claims, false, string(""), errors.New("formato de token invalido")
 	}
-	tk = strings.TrimSpace(splitToken[1])
 
+
+	tk = strings.TrimSpace(splitToken[1])
 	*/
+
 	tkn, err := jwt.ParseWithClaims(tk, claims, func(token *jwt.Token) (interface{}, error) {
 		return miClave, nil
 	})
@@ -32,6 +34,7 @@ func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
 		if encontrado == true {
 			Email = claims.Email
 			IDUsuario = claims.ID.Hex()
+
 		}
 		return claims, encontrado, IDUsuario, nil
 	}

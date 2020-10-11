@@ -20,6 +20,20 @@ func Manejadores() {
 	router.HandleFunc("/modificarPerfil", middlew.ChequeBD(middlew.ValidoJWT(routers.ModificarPerfil))).Methods("PUT")
 	router.HandleFunc("/tweet", middlew.ChequeBD(middlew.ValidoJWT(routers.GraboTweet))).Methods("POST")
 	router.HandleFunc("/leoTweets", middlew.ChequeBD(middlew.ValidoJWT(routers.LeoTweets))).Methods("GET")
+	router.HandleFunc("/eliminartweet", middlew.ChequeBD(middlew.ValidoJWT(routers.EliminarTweet))).Methods("DELETE")
+
+	router.HandleFunc("/subiravatar", middlew.ChequeBD(middlew.ValidoJWT(routers.SubirAvatar))).Methods("POST")
+	router.HandleFunc("/obteneravatar", middlew.ChequeBD(routers.ObtenerAvatar)).Methods("GET")
+	router.HandleFunc("/subirbanner", middlew.ChequeBD(middlew.ValidoJWT(routers.SubirBanner))).Methods("POST")
+	router.HandleFunc("/obtenerbanner", middlew.ChequeBD(routers.ObtenerBanner)).Methods("GET")
+
+	router.HandleFunc("/altarelacion", middlew.ChequeBD(middlew.ValidoJWT(routers.AltaRelacion))).Methods("POST")
+	router.HandleFunc("/borrarrelacion", middlew.ChequeBD(middlew.ValidoJWT(routers.BajaRelacion))).Methods("DELETE")
+
+	router.HandleFunc("/consultorelacion", middlew.ChequeBD(middlew.ValidoJWT(routers.ConsultoRelacion))).Methods("GET")
+
+	router.HandleFunc("/listausuarios", middlew.ChequeBD(middlew.ValidoJWT(routers.ListaUsuarios))).Methods("GET")
+	router.HandleFunc("/listatweetrelacion", middlew.ChequeBD(middlew.ValidoJWT(routers.LeoTweetSeguidores))).Methods("GET")
 
 	// pongo en listen el puerto
 	PORT := os.Getenv("PORT")
